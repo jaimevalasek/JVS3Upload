@@ -16,7 +16,7 @@ Após feito feito os passos acima, abra o arquivo config/application.config.php.
 
 Configurando as credenciais
 -----
- - Crie um arquivo dentro da pasta autoload/aws.local.php e adicione o código abaixo
+ - Crie um arquivo dentro da pasta global config/autoload/aws.local.php e adicione o código abaixo
  
 ```php
 <?php
@@ -125,7 +125,7 @@ $config = $this->getServiceLocator()->get('config');
 $s3 = new S3($config["Aws"]["key"], $config["Aws"]["secret"]);
 $s3->putBucket($bucket, S3::ACL_PUBLIC_READ);
 		    
-if($s3->deleteObject($bucket, deleteDestination))
+if($s3->deleteObject($bucket, $deleteDestination))
 {
 	// Se chegar aqui é porque o arquivo foi excluido
 } 
