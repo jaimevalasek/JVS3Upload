@@ -1,0 +1,29 @@
+{
+    "name": "jaimevalasek/jv-s3-upload",
+    "description": "A generic module AWS Amazon S3 Upload for ZF2.",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "zf2", "s3 upload", "aws amazon s3", "jaimevalasek"
+    ],
+    "homepage": "https://github.com/jaimevalasek/JVS3Upload",
+    "authors": [
+        {
+            "name": "Jaime Marcelo Valasek",
+            "email": "jaime.valasek@gmail.com",
+            "homepage": "http://valasek.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*"
+    },    
+    "autoload": {
+        "psr-0": {
+            "JVS3Upload": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
