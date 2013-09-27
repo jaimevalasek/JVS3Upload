@@ -14,6 +14,32 @@ Faça o download deste modulo para dentro de sua pasta vendor.
 
 Após feito feito os passos acima, abra o arquivo config/application.config.php. E adicione o modulo com o nome JVS3Upload.
 
+### With composer
+
+1. Add this project and JVS3Upload in your composer.json:
+
+```php
+"require": {
+    "jaimevalasek/jv-s3-upload": "dev-master"
+}
+```
+
+2. Now tell composer to download JVS3Upload by running the command:
+
+```php $ php composer.phar update```
+
+### Enabling it in your `application.config.php`.
+```php
+<?php
+return array(
+    'modules' => array(
+        // ...
+        'JVS3Upload',
+    ),
+    // ...
+);
+```
+
 Configurando as credenciais
 -----
  - Crie um arquivo dentro da pasta global config/autoload/aws.local.php e adicione o código abaixo
